@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHub-Nhà sách trực tuyến</title>
+    <link rel="stylesheet" href="~/css/layout.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    @Html.Partial("_NguyenDucThien_Header")
+    
+    <main class="main">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+
+    @Html.Partial("_NguyenDucThien_Footer")
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
